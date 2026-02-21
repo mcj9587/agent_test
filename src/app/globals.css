@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background-color: #0a0a0a;
+  color: #fafafa;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+}
+
+/* Prevent text selection in chat bubbles during scroll */
+.select-none-scroll {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Smooth transitions for route changes */
+main {
+  min-height: 100vh;
+}
+
+/* Input placeholder animation */
+textarea:focus::placeholder {
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+textarea::placeholder {
+  transition: opacity 0.3s ease;
+}
+
+/* Photo message hover effect */
+.group:hover .photo-overlay {
+  opacity: 0.7;
+}
+
+/* Remove default tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Fix iOS input zoom */
+@media screen and (max-width: 768px) {
+  textarea,
+  input {
+    font-size: 16px !important;
+  }
+}
